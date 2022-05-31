@@ -28,8 +28,8 @@ public class Aplikace extends JFrame {
     private void init() {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setIconImage(new ImageIcon(Aplikace.class.getResource("czechitas-icon.png")).getImage());
-        setLayout(new MigLayout("wrap 4", "[right]rel[50:75:250,grow,fill]"));
-        setMinimumSize(new Dimension(400, 300));
+        setLayout(new MigLayout("wrap 2", "[right]rel[50:120:150,grow,fill]"));
+        setMinimumSize(new Dimension(250, 200));
 
         //TODO implementovat formulář podle zadání
 

@@ -37,6 +37,13 @@ String text3 = "Počet králíků: " + cislo3;
 
 Neplatné hodnoty zadané do `JTextField`u neřešte.
 
+Tip: bývá zvykem textová pole pro čísla zarovnávat vpravo. Zarovnání textu v textfieldu nastavuje následující kód:
+
+```java
+textField.setHorizontalAlignment(JTextField.TRAILING);
+```
+
+
 # Bonus 1
 
 Místo `JTextField` můžete použít `JSpinner`, což je komponenta, která umožňuje pomocí šipek krokovat hodnoty. Používá se
