@@ -8,7 +8,11 @@ a hlav na farmě je. Mutanti a zvířata bez nožiček a hlaviček se nepočít
 Pozor, `JTextField`y s výslednými hodnotami by neměly být editovatelné (tj. měly by být read-only), ale pořád by mělo
 jít v nich označit hodnotu a zkopírovat jit do schránky (Ctrl+C / Cmd+C).
 
-V aplikaci už je připraven dvousloupcový layout, první sloupec je určen pro popisky (label), druhý sloupec pro vstupní pole (textfield). 
+V aplikaci už je připraven dvousloupcový layout, první sloupec je určen pro popisky (label), druhý sloupec pro vstupní pole (textfield).
+
+Aplikace bude po spuštění vypadat např. takhle:
+
+![snímek obrazovky](screenshot.png)
 
 ## Rady na cestu
 `JTextField` má vlastnosti `editable` a `enabled`. (Připomínám, že vlastnost/property znamená, že existuje odpovídající
