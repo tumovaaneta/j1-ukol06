@@ -9,14 +9,17 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 
 public class Aplikace extends JFrame {
+
+  
+
     private JLabel husyLabel;
     private JLabel kraliciLabel;
     private JLabel pocetHlavLabel;
     private JLabel pocetNohouLabel;
 
     //    **************************************************************************
-    private JTextField husyField;
-    private JTextField kraliciField;
+    private JSpinner husyField;
+    private JSpinner kraliciField;
     private JTextField pocetHlavField;
     private JTextField pocetNohouField;
 //    ******************************************************************************
@@ -45,16 +48,20 @@ public class Aplikace extends JFrame {
         setMinimumSize(new Dimension(250, 200));
         //TODO implementovat formulář podle zadání
 
-        husyField = new JTextField();
-        husyField.setHorizontalAlignment(JTextField.TRAILING);
+//        JSpinner spinner = new JSpinner();
+//        int  = (Integer) spinner.getValue();
+
+        husyField = new JSpinner();
+
+//        husyField.setHorizontalAlignment(JTextField.TRAILING);
         husyLabel = new JLabel("Husy");
         husyLabel.setDisplayedMnemonic('H');
         husyLabel.setLabelFor(husyField);
         add(husyLabel);
         add(husyField);
 
-        kraliciField = new JTextField();
-        kraliciField.setHorizontalAlignment(JTextField.TRAILING);
+        kraliciField = new JSpinner();
+//        kraliciField.setHorizontalAlignment(JTextField.TRAILING);
         kraliciLabel = new JLabel("Králíci");
         kraliciLabel.setDisplayedMnemonic('K');
         kraliciLabel.setLabelFor(kraliciField);
@@ -89,14 +96,17 @@ public class Aplikace extends JFrame {
         int pocetHlav;
         int pocetNohou;
 
-        pocetHlav = Integer.parseInt(husyField.getText()) + Integer.parseInt(kraliciField.getText());
+        int husyCislo = (Integer) husyField.getValue();
+        int kralikCislo = (Integer) kraliciField.getValue();
+
+        pocetHlav = husyCislo + kralikCislo;
         pocetHlavField.setHorizontalAlignment(JTextField.TRAILING);
         pocetHlavField.setText(Integer.toString(pocetHlav));
         pocetHlavField.setEditable(false);
 
 
 
-        pocetNohou = (Integer.parseInt(husyField.getText()) * 2) + (Integer.parseInt(kraliciField.getText()) * 4);
+        pocetNohou = (husyCislo * 2) + (kralikCislo * 4);
         pocetNohouField.setHorizontalAlignment(JTextField.TRAILING);
         pocetNohouField.setText(Integer.toString(pocetNohou));
         pocetNohouField.setEditable(false);
