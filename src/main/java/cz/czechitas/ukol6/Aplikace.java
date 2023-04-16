@@ -45,23 +45,21 @@ public class Aplikace extends JFrame {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setIconImage(new ImageIcon(Aplikace.class.getResource("czechitas-icon.png")).getImage());
         setLayout(new MigLayout("wrap 2", "[right]rel[50:120:150,grow,fill]"));
-        setMinimumSize(new Dimension(250, 200));
+        setMinimumSize(new Dimension(350, 200));
         //TODO implementovat formulář podle zadání
 
-//        JSpinner spinner = new JSpinner();
-//        int  = (Integer) spinner.getValue();
+        SpinnerNumberModel modelHusy = new SpinnerNumberModel(0, 0, Integer.MAX_VALUE, 1);
+        SpinnerNumberModel modelKralici = new SpinnerNumberModel(0, 0, Integer.MAX_VALUE, 1);
 
-        husyField = new JSpinner();
 
-//        husyField.setHorizontalAlignment(JTextField.TRAILING);
+        husyField = new JSpinner(modelHusy);
         husyLabel = new JLabel("Husy");
         husyLabel.setDisplayedMnemonic('H');
         husyLabel.setLabelFor(husyField);
         add(husyLabel);
         add(husyField);
 
-        kraliciField = new JSpinner();
-//        kraliciField.setHorizontalAlignment(JTextField.TRAILING);
+        kraliciField = new JSpinner(modelKralici);
         kraliciLabel = new JLabel("Králíci");
         kraliciLabel.setDisplayedMnemonic('K');
         kraliciLabel.setLabelFor(kraliciField);
